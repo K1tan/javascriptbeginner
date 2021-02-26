@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="wrapper">
+    
+        <div class="about">
+                <div class="about_header">
+                    <div class="header_text">JavaScript для начинающих</div>
+                </div>
+                <div class="about_row">
+                    <div class="about_block">
+                        <div class="about_title">• Что такое JS?</div>
+                        <div class="about_text">
+                            &nbsp;&nbsp;&nbsp;JavaScript — это полноценный язык программирования. <br>
+                            Изначально он был создан, чтобы «сделать веб-страницы живыми». <br>
+        
+                            Программы на этом языке называются скриптами. Они могут встраиваться в HTML и выполняться автоматически при загрузке веб-страницы.<br>
+        
+                            Скрипты распространяются и выполняются, как простой текст. Им не нужна специальная подготовка или компиляция для запуска.<br>
+        
+                            Сегодня JavaScript может выполняться не только в браузере, но и на сервере или на любом другом устройстве, которое имеет специальную программу, называющуюся «движком» JavaScript.<br>
+                        </div>
+                    </div>
+                    <div class="about_block" style="background:#fedf19; color: #3c3835;">
+                        <div class="about_title">• Что можно делать с помощью JavaScript?</div>
+                        <div class="about_text">
+                            Возможности JavaScript сильно зависят от окружения, в котором он работает. Например, Node.JS поддерживает функции чтения/записи произвольных файлов, выполнения сетевых запросов и т.д.<br>
+        
+                            В браузере для JavaScript доступно всё, что связано с манипулированием веб-страницами, взаимодействием с пользователем и веб-сервером. <br>
+        
+                            Например, в браузере JavaScript может:<br><br>
+                            <ul style="font-size: 23px; text-indent: 20px;">
+                                <li class="about-li">• Добавлять новый HTML-код на страницу, изменять существующее содержимое, модифицировать стили.</li>
+                                <li class="about-li">• Реагировать на действия пользователя, щелчки мыши, перемещения указателя, нажатия клавиш.</li>
+                                <li class="about-li">• Отправлять сетевые запросы на удалённые сервера, скачивать и загружать файлы (технологии AJAX и COMET).</li>
+                                <li class="about-li">• Получать и устанавливать куки, задавать вопросы посетителю, показывать сообщения.</li>
+                                <li class="about-li">• Запоминать данные на стороне клиента («local storage»).</li>
+        
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="about_block">
+                        <div class="about_title">• Чего нельзя сделать с помощью JavaScript?</div>
+                        <div class="about_text">Возможности JavaScript в браузере ограничены ради безопасности пользователя. Цель заключается в предотвращении доступа недобросовестной веб-страницы к личной информации или нанесения ущерба данным пользователя. <br>
+                            Примеры таких ограничений включают в себя: <br>
+                            <ul style="font-size: 23px; text-indent: 20px;">
+                                <li class="about-li">• JavaScript на веб-странице не может читать/записывать произвольные файлы на жёстком диске, копировать их или запускать программы. Он не имеет прямого доступа к системным функциям ОС.</li>
+                                <li class="about-li">• Современные браузеры позволяют ему работать с файлами, но с ограниченным доступом, и предоставляют его, только если пользователь выполняет определённые действия, такие как «перетаскивание» файла в окно браузера или его выбор с помощью тега input.</li>
+                                <li class="about-li">• Существуют способы взаимодействия с камерой/микрофоном и другими устройствами, но они требуют явного разрешения пользователя. Таким образом, страница с поддержкой JavaScript не может незаметно включить веб-камеру, наблюдать за происходящим и отправлять информацию в ФСБ.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="examples">
+            <div class="examples_text">Теперь посмотрим на несколько вещей, которые вы можете сделать, используя JavaScript!</div>
+
+            <div class="examples_block">
+                <div class="examples_title">
+                    1. Приветствие пользователя.
+                </div>
+                <div class="examples_example">
+                    Введите свое имя:
+                    <br>
+                    <input type="text" id="greeting" placeholder="Имя" class="examples_input">
+                    <button class="btn-1" id="btnGreeting">Показать</button>
+                    
+                </div>
+                <div class="examples_code">
+                    
+                </div>
+            </div>
+            <div class="examples_block">
+                <div class="examples_title">
+                    2. Расчет площади треугольника по его высоте и основанию.
+                </div>
+                <div class="examples_example">
+                    Введите основание и высоту: <span style="display: none; color: red;">Введены некорректные данные</span>
+                    <br>
+                    
+                    <input type="text" class="examples_input" id="trHeight" placeholder="Высота">
+                    <input type="text" class="examples_input" id="trBase" placeholder="Основание">
+                    <button class="btn-1" id="btnTrSquare">Рассчитать</button>
+                    <div>Ответ: <span id="trSquare"></span><span id="trSquareError" style="color: red;"></span></div>
+                </div>
+                <div class="examples_code">
+
+                </div>
+            </div>
+            <div class="examples_block">
+                <div class="examples_title">
+                    3. Сравнение количества символов в строках.
+                </div>
+                <div class="examples_example">
+                    Введите данные в оба поля, чтобы сравнить количество символов в них.
+                    <br>
+                    <input class="examples_input" type="text" id="String1" placeholder="Строка 1"> = 
+                    <input class="examples_input" type="text" id="String2" placeholder="Строка 2">
+                    <span id="stringCompare"></span>
+                    <button class="btn-1" id="btnStringCompare">Сравнить</button>
+                </div>
+                <div class="examples_code">
+
+                </div>
+            </div>
+            <div class="examples_block">
+                <div class="examples_title">
+                    4. Вывод минимального и максимального значения массива из 5 элементов.
+                </div>
+                <div class="examples_example">
+                    <span id="arrText">Добавьте элементы в массив:</span>
+                    <br>
+                    <input class="examples_input" type="text" id="arrElem" placeholder="Введите один элемент">
+                    <span id="arrDisplay" style="display: none; font-size: 30px; font-family:'Courier New', Courier, monospace;">Минимальное значение массива: <span id="arrMinElem"></span><br>
+                    Макимальное значение массива: <span id="arrMaxElem"></span></span>
+                    
+                    <button class="btn-1" id="btnArrAdd">Добавить</button>
+                </div>
+                <div class="examples_code">
+
+                </div>
+            </div>
+            <div class="examples_block">
+                <div class="examples_title">
+                    5. Таймер.
+                </div>
+                <div class="examples_example">
+                    
+                    
+                    
+                    <input class="examples_input" min="0" max="60" type="number" id="timerMin" placeholder="Мин." style="width: 60px;">
+                    <span id="timerDisplayMin" style="display: none; width: 60px;"></span> : <span style="display: none; width: 60px;" id="timerDisplaySec"></span>
+                    <input class="examples_input" min="0" max="60" type="number" id="timerSec" placeholder="Сек." style="width: 60px;">
+                    
+                    
+                    <button class="btn-1" id="btnTimerStart">Начать отсчет</button>
+                    <button class="btn-1" id="btnTimerPause" style="display: none;">Пауза</button>
+                    <button class="btn-1" id="btnTimerStop" style="display: none;">Стоп</button>
+
+                </div>
+                <div class="examples_code">
+
+                </div>
+            </div>
+            <div class="examples_block">
+                <div class="examples_title">
+                    6. Тест на знание JS.
+                </div>
+                <div class="examples_example">
+                    <div class="test">
+                        <div class="test_question" id="q1">
+                            1)Что такое JavaScript?
+                            <div class="answer" onclick="wrongAnswer('q1')">Фреймворк для Java.</div>
+                            <div class="answer" id="a1" onclick="rightAnswer('a1')">Язык программирования.</div> 
+                            <div class="answer" onclick="wrongAnswer('q1')">Веб-интерфейс.</div>
+                            <div class="answer" onclick="wrongAnswer('q1')">База данных.</div>
+                            
+                        </div>
+                        <div class="test_question" id="q2">
+                            2)Какая разница между функциями setInterval() и setTimeout()?
+                            <div class="answer" onclick="wrongAnswer('q2')">Между ними нет разницы.</div>
+                            <div class="answer" onclick="wrongAnswer('q2')">Функция setInterval() динамичнее, потому что в ней можно задавать разные интервалы в отличие от setTimeout().</div>
+                            <div class="answer" onclick="wrongAnswer('q2')">Функция setInterval() вызывает функцию через заданный промежуток только 1 раз, а функция setTimeout() вызывает заданную функцию постоянно через заданный промежуток времени.</div>
+                            <div class="answer" id="a2" onclick="rightAnswer('a2')">Функция setInterval() вызывает заданную функцию постоянно через заданный промежуток времени, а функция setTimeout() вызывает функцию через заданный промежуток только 1 раз.</div>
+                        </div>
+                        <div class="test_question" id="q3">
+                            3)Что выведет код?<br>
+                             let y = 1;<br>
+                             let x = y = 2; <br>
+                             alert(x);
+
+                            
+                            <div class="answer" onclick="wrongAnswer('q3')">1</div>
+                            <div class="answer" onclick="wrongAnswer('q3')">В коде допущена ошибка.</div>
+                            <div class="answer" onclick="wrongAnswer('q3')">Y</div>
+                            <div class="answer" id="a3" onclick="rightAnswer('a3')">2</div>
+                        </div>
+                        <div class="test_question" id="q4">
+                            4)Что делает оператор === ?
+                            <div class="answer"  onclick="wrongAnswer('q4')">Ищет истину.</div>
+                            <div class="answer" id="a4" onclick="rightAnswer('a4')">Сравнивает без приведения типа.</div>
+                            <div class="answer"  onclick="wrongAnswer('q4')">Его не существует.</div>
+                            <div class="answer"  onclick="wrongAnswer('q4')">Присваивает трижды.</div>
+                        </div>
+                        <div class="test_question" id="q5">
+                            5)Что выведет alert? 
+                            alert(str);
+                            var str = "Hello";
+                            <div class="answer"  onclick="wrongAnswer('q5')">Привет</div>
+                            <div class="answer" id="a5" onclick="rightAnswer('a5')">undefined</div>
+                            <div class="answer"  onclick="wrongAnswer('q5')">Hello</div>
+                            <div class="answer"  onclick="wrongAnswer('q5')">Ошибку</div>
+                        </div>
+                        <div class="test_question" id="q6">
+                            6)Какая арифметическая операция приводит к ошибке в JavaScript?
+                            <div class="answer"  onclick="wrongAnswer('q6')">Деление на ноль.</div>
+                            <div class="answer"  onclick="wrongAnswer('q6')">Умножение числа на строку.</div>
+                            <div class="answer"  onclick="wrongAnswer('q6')">Корень из отрицательного числа.</div>
+                            <div class="answer" id="a6" onclick="rightAnswer('a6')">Никакая из вышеперечисленных.</div>
+                        </div>
+                        <div class="test_question" id="q7">
+                            7)Какая функция вызывает окно с текстовым полем, в которое пользователь может ввести строку?
+                            <div class="answer" id="a7" onclick="rightAnswer('a7')">prompt()</div>
+                            <div class="answer"  onclick="wrongAnswer('q7')">aletr()</div>
+                            <div class="answer"  onclick="wrongAnswer('q7')">promt()</div>
+                            <div class="answer"  onclick="wrongAnswer('q7')">alerts()</div>
+                        </div>
+                        <div class="test_question" id="q8">
+                            8)Какая функция вызывает окно с предупреждающим сообщением?
+                            <div class="answer"  onclick="wrongAnswer('q8')">prompt()</div>
+                            <div class="answer" id="a8" onclick="rightAnswer('a8')">aletr()</div>
+                            <div class="answer"  onclick="wrongAnswer('q8')">promt()</div>
+                            <div class="answer"  onclick="wrongAnswer('q8')">alerts()</div>
+                        </div>
+                        <div class="test_question" id="q9">
+                            9)Есть ли разница между выражениями !!(a && b) и (a && b)?
+                            <div class="answer" id="a9" onclick="rightAnswer('a9')">Да.</div>
+                            <div class="answer"  onclick="wrongAnswer('q9')">Нет.</div>
+                            
+                        </div>
+                        <div class="test_question" id="q10">
+                            10)За сколько дней был разработан LiveScript — первая версия языка JavaScript?
+                            <div class="answer"  onclick="wrongAnswer('q10')">1</div>
+                            <div class="answer"  onclick="wrongAnswer('q10')">2</div>
+                            <div class="answer" id="a10" onclick="rightAnswer('a10')">10</div>
+                            <div class="answer"  onclick="wrongAnswer('q10')">365</div>
+                        </div>
+                        
+                        <div class="test_result" style="display: none;">Результат: <span id="test_result">0</span> из 10.</div>
+                        <button class="btn-1" id="btnTestStart">Начать</button>
+                        <button class="btn-1" id="btnTestNext" style="display: none;">Пропустить</button>
+                        
+                    </div>
+                </div>
+                <div class="examples_code">
+
+                </div>
+            </div>
+            <div class="examples_block">
+                <div class="examples_title">
+                    7. Заставка.
+                </div>
+                <div class="examples_example">
+                    <div class="screenSaver" id="screenSaver">
+                        <div id="user">Гость</div>
+                        <div id="date">01-01-2021</div>
+                    </div>
+                    <button class="btn-1" id="btnScreenSaver">Показать</button>
+                </div>
+                <div class="examples_code">
+
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="popup-greeting" id="popup-greeting">
+            <div class="popup-greeting_body">
+                <div class="popup-greeting_content">
+                    <a href="##" class="popup-greeting_close">X</a>
+                    <div class="popup-greeting_text-template">
+                        Привет, <span class="popup-greeting_text"></span>!
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+<script src="js/script.js"></script>
+</html>
