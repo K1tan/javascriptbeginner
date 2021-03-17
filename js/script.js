@@ -154,12 +154,12 @@ document.getElementById('btnTimerStart').onclick = function () {
 
   var idTick = setInterval(() => {
     if (!isPaused) {
-      while (timerSec > 60) {
+      while (timerSec >= 60) {
         timerSec -= 60
         timerMin++
       }
-      if (timerMin > 60) {
-        timerMin = 60
+      if (timerMin > 59) {
+        timerMin = 59
       }
       if (sec > 0) {
         document.getElementById('timerDisplaySec').innerHTML = timerSec
